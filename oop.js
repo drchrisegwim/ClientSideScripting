@@ -33,7 +33,7 @@ myCircle.draw();
 
 // Constructor Function
 //The "This" keyword is basically a reference to the object referencing this piece of code.
-// Constructor in Js starts with Capital letter of its object.
+// Constructor in Js starts with Capital letter of its object and does not have return keyword yet it returns its properties and functions.
 
 function Circle (radius){
      this.radius = radius;
