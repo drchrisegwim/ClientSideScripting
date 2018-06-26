@@ -110,3 +110,21 @@ circ.location = {x: 2};
 //Removing/Deleting
 
 delete circ.radius;
+
+
+// Enumurating via an object
+// One method is to use for
+for (let key in circ) {
+    //Displayiing only properties and no functions
+    if (typeof circ[key] != 'function')
+    console.log("Answer is: " + key, circ[key]);
+}
+
+//Another method is to get all the keys
+const keys = Object.keys(circ);
+console.log(keys);
+
+// To check existence of a property in an object use the in operator:
+
+if ('location' in circ)
+    console.log('My circle has a location!!!');
