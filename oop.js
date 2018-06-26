@@ -128,3 +128,23 @@ console.log(keys);
 
 if ('location' in circ)
     console.log('My circle has a location!!!');
+
+
+
+// scope(refers to local variables. Scope is temporary) closure (refers to global variables. Closure stays there)
+function Rectangle(radius) {
+    this.radius = radius;
+
+    let defaultLocation = {x:0, y:0};
+    let computeOptimumLocation = function (factor) {
+        //...
+    }
+    this.draw = function () {
+        computeOptimumLocation(0.1);
+        //defaultLocation
+        console.log('drawing a rectangle');
+    };
+}
+
+const rec = new Rectangle(33);
+rec.draw();
