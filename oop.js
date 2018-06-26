@@ -45,3 +45,52 @@ function Circle (radius){
 const anotherCircle = new Circle(5);
 console.log("This is to display the call to the constructor",anotherCircle);
 
+
+// Every object in Js has a constructor property.
+//Functions are actually objects in Js.
+
+// Value vs Reference types.
+
+let x = 10;
+let y = x;
+
+x = 20;
+console.log(y);
+console.log(x);
+
+// from the above code you can see that the value of y is independent of that of x.
+// But if we want both x and y value to be dependent then:
+
+let xx = { value: 10};
+let yy = xx;
+
+xx.value = 20;
+
+console.log('The yy value is:',yy);
+console.log('The xx value is:',xx);
+
+//Primitives are copied by their values 
+
+let number = 10;
+
+function increase(number){
+    number++;
+}
+
+increase(number);
+
+console.log(number);  // Ans is 10 cos of copy by value.
+
+
+//while objects by their reference:
+let obj = {value:10};
+
+function increase(obj){
+ obj.value++;
+}
+
+increase(obj);
+console.log(obj);
+
+
+
