@@ -86,7 +86,7 @@ console.log(number);  // Ans is 10 cos of copy by value.
 let obj = {value:10};
 
 function increase(obj){
- obj.value++;
+    obj.value++;
 }
 
 increase(obj);
@@ -144,7 +144,26 @@ function Rectangle(radius) {
         //defaultLocation
         console.log('drawing a rectangle');
     };
+
+
+
+// Getters and Setters!!!
+
+Object.defineProperty(this,'defaultLocation', {
+    get: function(){
+        return defaultLocation;
+    },
+    set: function(value){
+        if(!value.x || !value.y)
+           throw new   Error('Invalid location.');
+
+        defaultLocation = value;
+    }
+});
+
 }
 
 const rec = new Rectangle(33);
 rec.draw();
+
+
