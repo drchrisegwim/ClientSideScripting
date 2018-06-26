@@ -93,4 +93,20 @@ increase(obj);
 console.log(obj);
 
 
+//Adding or removing properties from an object
 
+//Adding
+function NewCircle(radius){
+    this.radius = radius;
+    this.draw = function(){
+        console.log('draw new circle!');
+    }
+}
+
+const circ = new NewCircle(5);
+
+circ.location = {x: 2};
+
+//Removing/Deleting
+
+delete circ.radius;
