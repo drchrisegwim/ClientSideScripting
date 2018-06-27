@@ -43,3 +43,12 @@ const sq2 = new Square(2);
 Square.prototype.toString = function(){
     return ' Square with radius ' + this.radius;
 }
+
+
+// Iterating over instance member against prototype members.
+
+// Returns instance members
+console.log( "This is: " + Object.keys(sq1));
+
+// Returns all members (Instance(AKA OwnProperty) + prototype)
+for (let key in sq1) console.log(key);
