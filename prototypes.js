@@ -23,3 +23,23 @@ person.name = 'Blessing';
 console.log(person);
 
 console.log(Object.keys(person));
+
+//Constructor Prototypes
+
+function Square(radius){
+    // Instance members
+    this.radius = radius;
+    
+}
+
+// Prototype members 
+Square.prototype.draw = function (  ) {
+    console.log('draw');
+}
+
+const sq1 = new Square(3);
+const sq2 = new Square(2);
+
+Square.prototype.toString = function(){
+    return ' Square with radius ' + this.radius;
+}
