@@ -166,4 +166,7 @@ Object.defineProperty(this,'defaultLocation', {
 const rec = new Rectangle(33);
 rec.draw();
 
+//Prototipical Inheritance in Js is essentially the parent object 
+
+
 
