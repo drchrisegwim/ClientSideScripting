@@ -54,7 +54,34 @@ console.log( "This is: " + Object.keys(sq1));
 for (let key in sq1) console.log(key);
 
 
+// Creating your own prototypical inheritance.
 
+function Shape(){
+
+}
+
+Shape.prototype.duplicate = function(){
+    console.log('From Duplicate prototype!');
+};
+
+function Trapezium(radius, color){
+
+    // To call the super constructor named shape in it sub constructor trapezium do the next line:
+    Shape.call(this, color);
+    this.radius = radius;
+}
+
+Trapezium.prototype.draw = function (){
+    console.log('Draw Trapezium!!!');
+};
+
+const s = new Shape();
+const t = new Trapezium(3, 'blue');
+
+//So to make trapezium inherit from shape object then do the following:
+
+Trapezium.prototype = Object.create(Shape.prototype);
+Trapezium.prototype.constructor = Trapezium;
 
 
 
